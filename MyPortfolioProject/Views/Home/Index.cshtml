@@ -1,0 +1,103 @@
+﻿
+@model List<Skill>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+            <img src="~/img/hero-img.jpg" class="d-block mx-lg-auto img-fluid rounded" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+        </div>
+        <div class="col-lg-6 text-white">
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Farid Alizada</h1>
+            <p class="lead">I am an enthusiastic, self-motivated, reliable, responsible and hard working person. I am a mature team worker and adaptable to all challenging situations. I am able to work well both in a team environment as well as using own initiative. I am able to work well under pressure and adhere to strict deadlines.</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">About Me</button>
+                <button type="button" class="btn btn-outline-secondary btn-lg px-4">Download CV</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container my-5">
+    <div class="p-5 text-center bg-body-tertiary rounded-3 text-white">
+        <img src="~/img/about-logo-img.png" width="100" height="100" />
+        <h1 class="text-body-emphasis">About me</h1>
+        <p class="col-lg-8 mx-auto fs-5 text-muted">
+            This is a custom jumbotron featuring an SVG image at the top, some longer text that wraps early thanks to a responsive  class, and a customized call to action.
+        </p>
+        <div class="d-inline-flex gap-2 mb-5">
+            <button class="d-inline-flex align-items-center btn btn-primary btn-lg px-4 rounded-pill text-center" type="button">
+                Call to action
+                <i class='bx bx-download ms-3'></i>
+            </button>
+           
+        </div>
+    </div>
+</div>
+
+<div class="container mb-5 " >
+    <div class="card h-100 rounded-3" style="border:5px solid gray;">
+        <div class="card-body bg-dark text-white">
+                <h6 class="d-flex align-items-center mb-3">Skills</h6>
+          @foreach(Skill item in Model)
+            {
+                <h3>@item.SkillName</h3>
+                <small>@item.SkillDescription</small>
+                <div class="progress mb-3" style="height: 15px">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width:@item.SkillValue%" aria-valuenow="@item.SkillValue" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar" style="width:@item.SkillValue ">@item.SkillValue%</div>
+                    </div>
+                </div>
+            }
+        
+                
+            </div>
+        </div>
+</div>
+
+
+<div class="container mt-4">
+    <div id="carouselExampleCaptions" class="carousel carousel-dark slide ">
+        <div class="carousel-indicators ">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                    <img src="~/img/project-img1(1).png" class="d-block w-100">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                    <img src="~/img/project-img2(1).png" class="d-block w-100">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                    <img src="~/img/project-img3 (2).png" class="d-block w-100">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>

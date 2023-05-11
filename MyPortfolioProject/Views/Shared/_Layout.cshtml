@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyPortfolioProject</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <nav class="navbar bg-body-tertiary bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="~/img/logo.png" width="35" height="35" class="d-inline-block align-text-top">
+                <span class="text-white">My Portfolio</span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="bg-dark">
+        <main role="main" class=" container pb-3">
+            @RenderBody()
+        </main>
+        <footer class="bg-dark text-center text-white">
+           
+            <div class="container p-4 pb-0">
+                
+                <section class="mb-4">
+                    
+
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                        <i class='bx bxl-twitter'></i>
+                    </a>
+
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                        <i class='bx bxl-instagram'></i>
+                    </a>
+
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                        <i class='bx bxl-linkedin'></i>
+                    </a>
+
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                        <i class='bx bxl-github'></i>
+                    </a>
+                </section> 
+            </div>
+            
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                © 2020 Copyright:
+                <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+            </div>
+            
+        </footer>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false) @* Haqqinda danisilacaq *@
+</body>
+</html>
